@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+       
+
+        <div class="table-responsive">
+            <table class="table" *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                       
+                        <th>Product</th>
+                        <th>Code</th>
+                        <th>Available</th>
+                        <th>Price</th>
+                        <th>5-Star Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = 'let product of products '>
+                        
+                        <td>{{product.productName |slice: 0 : 30}}</td>
+                        <td>{{product.productCode}}</td>
+                        <td>{{product.releaseDate}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.starRating}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>
+</div>
